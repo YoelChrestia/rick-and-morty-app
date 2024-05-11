@@ -1,11 +1,13 @@
-import Image from "next/image";
+import { CardsLayout } from "./components/CardsLayout";
 
 export default function Home() {
-  const pepe = 1
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>Rick and Morty App</p>
+    <main className="flex flex-col items-center p-10">
+      <section className="w-full flex justify-between gap-10">
+        <CardsLayout/>
+        <CardsLayout/>
+      </section>
     </main>
   );
 }
