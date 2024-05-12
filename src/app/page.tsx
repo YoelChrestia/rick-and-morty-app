@@ -1,13 +1,13 @@
-import { CardsLayout } from "./components/CardsLayout";
+import { EpisodesGrid } from "./components/EpisodesGrid";
+import { CharacterProvider } from "./contexts/characterContexts";
+import { CharactersSection } from "./components/CharactersSection";
 
 export default function Home() {
 
   return (
     <main className="flex flex-col items-center p-10">
-      <section className="w-full flex justify-between gap-10">
-        <CardsLayout/>
-        <CardsLayout/>
-      </section>
+        <CharactersSection />
+        <EpisodesGrid/>
     </main>
   );
 }
