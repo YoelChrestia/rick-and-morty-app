@@ -9,8 +9,8 @@ export const CharactersSection = async () => {
 
   return (
     <section className="w-full flex justify-between gap-10">
-          <CardsGrid charactersData={charactersData}/>
-          <CardsGrid charactersData={charactersData}/>
+          <CardsGrid charactersData={charactersData} position={'left'}/>
+          <CardsGrid charactersData={charactersData} position={'right'}/>
     </section>
   )
 }

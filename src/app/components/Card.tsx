@@ -7,7 +7,6 @@ import { Character } from '../types/Character';
 export const Card = (props: { characterData : Character, setSelectCharacter: React.Dispatch<React.SetStateAction<null|number>>, isSelected: boolean  }) => {
 
   const handleClick = () => {
-    console.log(props.characterData.id)
     props.setSelectCharacter(props.characterData.id)
   }
 
