@@ -7,15 +7,16 @@ export default function Home() {
 
   return (
     <>
-      <header className="w-full flex justify-center mt-6">
+      <header className="w-full flex justify-center mt-6 mb-2">
         <Image
           src={"/Rick_and_Morty.png"}
           alt="Rick and Morty Logo"
           width={400}
           height={300}
+          className="w-72 md:w-auto"
         /> 
       </header>
-      <main className="flex flex-col items-center p-8">
+      <main className="flex flex-col items-center p-2 md:p-8">
           <CharactersSection />
           <EpisodesGrid/>
       </main>
