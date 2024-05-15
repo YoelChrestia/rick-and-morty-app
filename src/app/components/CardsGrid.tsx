@@ -15,8 +15,8 @@ export const CardsGrid = (props: { charactersData : Character[] , position: stri
 
   return (
     <section className='flex flex-col justify-center'>
-      <h2 className='text-center mb-8'>Select Character</h2>
-      <div className='flex gap-6 flex-wrap justify-between'>
+      <h2 className='text-center mb-8 text-lg'>Select Character {props.position === 'left' ? '1#' : '2#'}</h2>
+      <div className='flex gap-5 flex-wrap justify-between'>
         { props.charactersData.map((character)=>{
             return( <Card characterData={character} setSelectCharacter={setSelectedBasedOnPosition} key={character.id} isSelected={character.id === selectedBasedOnPosition}/>)
           })

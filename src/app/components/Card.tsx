@@ -11,16 +11,17 @@ export const Card = (props: { characterData : Character, setSelectCharacter: Rea
   }
 
   return (
-    <button className={`flex flex-row border-2 border-black ${props.isSelected ? 'bg-green-500' : 'bg-white'} gap-4 w-96 items-center `} onClick={handleClick}>
+    <button className={`flex flex-row ${props.isSelected ? 'bg-blue-300' : 'bg-gray-300'} gap-4 w-[48%] items-center`} onClick={handleClick}>
         <Image
           src={props.characterData.image}
           alt="Picture of the author"
-          width={160}
-          height={160}
+          width={150}
+          height={150}
+          className=''
         />
-      <div className='flex flex-col justify-center'>
-        <h3 className='mb-4 flex'>{props.characterData.name}</h3>
-        <span>{props.characterData.status} - {props.characterData.species}</span>
+      <div className='flex flex-col justify-center items-start'>
+        <h3 className='mb-4 flex text-left'>{props.characterData.name}</h3>
+        <span >{props.characterData.status} - {props.characterData.species}</span>
       </div>
     </button>
   );
