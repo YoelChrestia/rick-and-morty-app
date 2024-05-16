@@ -7,9 +7,12 @@ export const EpisodesGrid = () => {
 
   const characterContext = useContext(CharacterContext)
 
+  if(!characterContext?.firstCharacterId || !characterContext.secondCharacterId){
+    return
+  }
 
   return (
-    <section className='flex mt-8 w-full border-black border-2 p-4 flex-col items-center md:flex-row md:items-start gap-5'>
+    <section className='flex mt-8 w-full border-black border-2 p-4 flex-col items-center md:flex-row md:items-start gap-5 max-h-96 overflow-y-scroll'>
         <div className='w-full md:w-2/6'>
             <h4 className='mb-4 text-center text-xl underline'>Character #1 - Only Episodes</h4>
             <div className='flex flex-col gap-4'>
