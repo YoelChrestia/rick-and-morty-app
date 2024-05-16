@@ -2,16 +2,16 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { Character } from '../types/Character';
+import { Character } from '../types/Character'
 
 export const Card = (props: { characterData : Character, setSelectCharacter: React.Dispatch<React.SetStateAction<null|number>>, isSelected: boolean  }) => {
 
   const handleClick = () => {
-    props.setSelectCharacter(props.characterData.id)
+    props.setSelectCharacter(prev => prev != props.characterData.id ? props.characterData.id : null)
   }
 
   return (
-    <button className={`flex flex-col p-2 md:p-0 md:flex-row ${props.isSelected ? 'bg-blue-300' : 'bg-gray-300'} gap-4 w-full 2xl:w-[48%] items-center`} onClick={handleClick}>
+    <button className={`flex flex-col p-2 md:p-0 md:flex-row ${props.isSelected ? 'bg-blue-300' : 'bg-gray-200'} gap-4 w-full 2xl:w-[48%] items-center`} onClick={handleClick}>
         <Image
           src={props.characterData.image}
           alt="Picture of the author"

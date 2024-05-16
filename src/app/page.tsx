@@ -1,7 +1,6 @@
-import { EpisodesGrid } from "./components/EpisodesGrid";
-import { CharacterProvider } from "./contexts/characterContexts";
-import { CharactersSection } from "./components/CharactersSection";
-import Image from "next/image";
+import { EpisodesGrid } from "./components/EpisodesGrid"
+import { CharactersSection } from "./components/CharactersSection"
+import Image from "next/image"
 
 export default function Home() {
 
